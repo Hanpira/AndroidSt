@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(MainActivity.this, dateSetDateStart, year, month, day).show();
+                editDateBirth.setTextColor(Color.BLACK);
             }
         });
 
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(MainActivity.this, dateSetDateEnd, year, month, day).show();
+                editDateEnd.setTextColor(Color.BLACK);
             }
         });
         dateSetDateEnd = new DatePickerDialog.OnDateSetListener() {

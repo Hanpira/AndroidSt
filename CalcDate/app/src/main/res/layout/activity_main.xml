@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Parent layout as linear layout-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEF6F7FF"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
@@ -40,17 +40,10 @@
         android:layout_marginLeft="16sp"
         android:layout_marginRight="16sp"
         android:ems="10"
+        android:focusable="false"
         android:hint="@string/exampleDate"
-        android:inputType="date" />
-
-    <Button
-        android:id="@+id/bt_birth"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:drawableRight="#7B27B0"
-        android:textColor="@color/black"
-        android:textSize="13sp" />
+        android:inputType="date"
+        android:textColorHint="#8DF66F6F" />
 
     <TextView
         android:id="@+id/TextDateEnd"
@@ -71,27 +64,20 @@
         android:layout_marginLeft="16sp"
         android:layout_marginRight="16sp"
         android:ems="10"
+        android:focusable="false"
         android:hint="@string/exampleDate"
-        android:inputType="date" />
+        android:inputType="date"
+        android:textColorHint="#8DF66F6F" />
 
-    <RadioButton
-        android:id="@+id/radioBtnToday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginRight="16sp"
-        android:text="@string/DateToday"
-        android:textColor="@color/material_dynamic_primary20" />
-
-    <Button
-        android:id="@+id/bt_today"
-        android:layout_width="145dp"
-        android:layout_height="50dp"
-        android:background="#00000000"
-        android:drawableRight="#7B27B0"
-        android:textColor="@color/black"
-        android:textSize="13sp" />
+    <!--    <RadioButton-->
+    <!--        android:id="@+id/radioBtnToday"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="16sp"-->
+    <!--        android:layout_marginTop="8sp"-->
+    <!--        android:layout_marginRight="16sp"-->
+    <!--        android:text="@string/DateToday"-->
+    <!--        android:textColor="@color/material_dynamic_primary20" />-->
 
     <Button
         android:id="@+id/btn_calculate"
@@ -125,6 +111,7 @@
             android:layout_marginLeft="8sp"
             android:layout_marginRight="16sp"
             android:text=" "
+            android:textColor="@color/material_dynamic_primary20"
             android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
