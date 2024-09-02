@@ -11,68 +11,122 @@
     tools:context=".MainActivity">
 
     <!-- linear layout to show datepickers-->
-    <LinearLayout
+    <TextView
+        android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/appTitle"
+        android:textColor="@color/material_dynamic_primary20"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <!-- to select the first date-->
-        <Button
-            android:id="@+id/bt_birth"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@android:color/transparent"
-            android:drawableRight="#7B27B0"
-            android:text="01/01/2021"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+    <TextView
+        android:id="@+id/textDateBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="16sp"
+        android:text="@string/dateStartText"
+        android:textColor="@color/material_dynamic_primary20"
+        android:textSize="16sp"
+        android:textStyle="normal" />
 
-        <!-- displaying message as "to"-->
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:gravity="center_horizontal"
-            android:text="To"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/editDateBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:ems="10"
+        android:hint="@string/exampleDate"
+        android:inputType="date" />
 
-        <!-- to display date number 2-->
-        <Button
-            android:id="@+id/bt_today"
-            android:layout_width="145dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:drawableRight="#7B27B0"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+    <Button
+        android:id="@+id/bt_birth"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="#7B27B0"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
 
-    </LinearLayout>
-    <!-- to perform the calculation-->
+    <TextView
+        android:id="@+id/TextDateEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="16sp"
+        android:text="@string/dateEndText"
+        android:textColor="@color/material_dynamic_primary20"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/editDateEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:ems="10"
+        android:hint="@string/exampleDate"
+        android:inputType="date" />
+
+    <RadioButton
+        android:id="@+id/radioBtnToday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="8sp"
+        android:layout_marginRight="16sp"
+        android:text="@string/DateToday"
+        android:textColor="@color/material_dynamic_primary20" />
+
+    <Button
+        android:id="@+id/bt_today"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:background="#00000000"
+        android:drawableRight="#7B27B0"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
     <Button
         android:id="@+id/btn_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Count age" />
+        android:layout_marginTop="8dp"
+        android:text="@string/countAge" />
 
-    <!-- to display the message "Result"-->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Result"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="16sp">
 
-    <!-- To show the final output(age)-->
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text=" "
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="8sp"
+            android:gravity="center_vertical"
+            android:text="@string/result"
+            android:textColor="@color/material_dynamic_primary20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="16sp"
+            android:text=" "
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CalcDate</string>
+    <string name="dateEndText">Конечная дата</string>
+    <string name="dateStartText">Дата рождения</string>
+    <string name="countAge">Рассчитать возраст</string>
+    <string name="result">Результат: </string>
+    <string name="exampleDate">01/01/2022</string>
+    <string name="DateToday">Сегодня</string>
+    <string name="appTitle">Узнать возраст</string>
 </resources>

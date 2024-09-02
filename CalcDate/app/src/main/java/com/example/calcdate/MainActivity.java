@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,10 +27,13 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-    // initializing variables
-    Button btn_birth, btn_today, btn_calculate;
+    final Calendar myCalendar= Calendar.getInstance();
+    Button btn_calculate;
+     RadioButton rbtn_today;
+    EditText editDateBirth, editDateEnd;
     TextView tvResult;
-    DatePickerDialog.OnDateSetListener dateSetListener1, dateSetListener2;
+
+    DatePickerDialog.OnDateSetListener dateSetDateStart, dateSetDateEnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,84 +41,47 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // assign variables
-        btn_birth = findViewById(R.id.bt_birth);
-        btn_today = findViewById(R.id.bt_today);
-        btn_calculate = findViewById(R.id.btn_calculate);
-        tvResult = findViewById(R.id.tv_result);
+        editDateBirth = (EditText) findViewById(R.id.editDateBirth);
+        editDateEnd = (EditText) findViewById(R.id.editDateEnd);
+        //rbtn_today = (RadioButton) findViewById(R.id.radioBtnToday);
 
-        // calendar format is imported to pick date
-        Calendar calendar = Calendar.getInstance();
+        btn_calculate = (Button) findViewById(R.id.btn_calculate);
+        tvResult = (TextView) findViewById(R.id.tv_result);
 
-        // for year
-        int year = calendar.get(Calendar.YEAR);
+        int year = myCalendar.get(Calendar.YEAR);
+        int month = myCalendar.get(Calendar.MONTH);
+        int day = myCalendar.get(Calendar.DAY_OF_MONTH);
 
-        // for month
-        int month = calendar.get(Calendar.MONTH);
 
-        // for date
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-        // to set the current date as by default
-        String date = simpleDateFormat.format(Calendar.getInstance().getTime());
-        btn_today.setText(date);
-
-        // action to be performed when button 1 is clicked
-        btn_birth.setOnClickListener(new View.OnClickListener() {
+        editDateBirth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // date picker dialog is used
-                // and its style and color are also passed
-                DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, dateSetListener1, year, month, day
-                );
-                // to set background for datepicker
-                Objects.requireNonNull(datePickerDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                datePickerDialog.show();
+                new DatePickerDialog(MainActivity.this, dateSetDateStart, year, month, day).show();
             }
         });
 
-        // it is used to set the date which user selects
-        dateSetListener1 = new DatePickerDialog.OnDateSetListener() {
+        dateSetDateStart = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
-                // here month+1 is used so that
-                // actual month number can be displayed
-                // otherwise it starts from 0 and it shows
-                // 1 number less for every month
-                // example- for january month=0
+
                 month = month + 1;
                 String date = day + "/" + month + "/" + year;
-                btn_birth.setText(date);
+                editDateBirth.setText(date);
             }
         };
 
-        // action to be performed when button 2 is clicked
-        btn_today.setOnClickListener(new View.OnClickListener() {
+        editDateEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // date picker dialog is used
-                // and its style and color are also passed
-                DatePickerDialog datePickerDialog = new DatePickerDialog(MainActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, dateSetListener2, year, month, day
-                );
-                // to set background for datepicker
-                Objects.requireNonNull(datePickerDialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                datePickerDialog.show();
+                new DatePickerDialog(MainActivity.this, dateSetDateEnd, year, month, day).show();
             }
         });
-
-        // it is used to set the date which user selects
-        dateSetListener2 = new DatePickerDialog.OnDateSetListener() {
+        dateSetDateEnd = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
-                // here month+1 is used so that
-                // actual month number can be displayed
-                // otherwise it starts from 0 and it shows
-                // 1 number less for every month
-                // example- for january month=0
                 month = month + 1;
                 String date = day + "/" + month + "/" + year;
-                btn_today.setText(date);
+                editDateEnd.setText(date);
             }
         };
 
@@ -122,20 +90,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // converting the inputted date to string
-                String sDate = btn_birth.getText().toString();
-                String eDate = btn_today.getText().toString();
+                String dateBirth = editDateBirth.getText().toString();
+                String dateEnd = editDateEnd.getText().toString();
+
                 SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd/MM/yyyy");
                 try {
-                    // converting it to date format
-                    Date date1 = simpleDateFormat1.parse(sDate);
-                    Date date2 = simpleDateFormat1.parse(eDate);
-
+                    Date date1=simpleDateFormat1.parse(dateBirth);
+                    Date date2=simpleDateFormat1.parse(dateEnd);
                     long startDate = date1.getTime();
                     long endDate = date2.getTime();
 
                     // condition
                     if (startDate <= endDate) {
-
                         long time_difference = endDate - startDate;
 
                         // Calculate time difference in days using TimeUnit class
@@ -143,23 +109,22 @@ public class MainActivity extends AppCompatActivity {
                         // Calculate time difference in years using TimeUnit class
                         //long years_difference = TimeUnit.MILLISECONDS.toDays(time_difference) / 365l;
                         // Calculate time difference in seconds using TimeUnit class
-                        long seconds_difference = TimeUnit.MILLISECONDS.toSeconds(time_difference) % 60;
+                        //long seconds_difference = TimeUnit.MILLISECONDS.toSeconds(time_difference) % 60;
                         // Calculate time difference in minutes using TimeUnit class
                         long minutes_difference = TimeUnit.MILLISECONDS.toMinutes(time_difference) % 60;
                         // Calculate time difference in hours using TimeUnit class
                         long hours_difference = TimeUnit.MILLISECONDS.toHours(time_difference) % 24;
-
 
                         org.joda.time.Period period = new Period(startDate, endDate, PeriodType.yearMonthDay());
                         int years_difference = period.getYears();
                         int months_difference = period.getMonths();
                         int days_difference = period.getDays();
 
-                        tvResult.setText(years_difference + "years " + months_difference + " months " + days_difference + " days, " + hours_difference + " hours " + minutes_difference + " minutes");
+                        tvResult.setText(years_difference + "лет " + months_difference + " месяцев " + days_difference + " дней, " + hours_difference + " часов " + minutes_difference + " минут.");
 
                     } else {
                         // show message
-                        Toast.makeText(MainActivity.this, "BirthDate should not be larger than today's date!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Дата рождения должна быть раньше конечной даты!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (ParseException e) {
                     e.printStackTrace();
