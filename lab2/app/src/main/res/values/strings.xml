@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Item</string>
+    <string name="infoPlant">Информация о растении</string>
+    <string name="tutorialFillForm">Нажмите \"Продолжить\", чтобы заполнить форму</string>
+    <string name="nextStep">Продолжить</string>
+</resources>
