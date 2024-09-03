@@ -7,4 +7,102 @@
     android:layout_height="match_parent"
     tools:context=".Plant">
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/plantInfoTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/infoPlant"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/textPlantType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/chooseTypePlant"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/typeVariety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+            <RadioButton
+                android:id="@+id/radioBtnPlantType1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/typeTree"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnPlantType2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/typeBush"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBtnPlantType3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/typeGrass"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textPlantSpecies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/textEnterSpecies"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextPlantSpecies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:ems="10"
+            android:hint="@string/exampleSpecies"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnStartInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:onClick="onRegisterPlant"
+            android:text="@string/nextStep" />
+
+        <TextView
+            android:id="@+id/textViewCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/Check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CheckBtn"
+            android:text="Button" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

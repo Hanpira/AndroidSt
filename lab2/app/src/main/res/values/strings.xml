@@ -3,4 +3,19 @@
     <string name="infoPlant">Информация о растении</string>
     <string name="tutorialFillForm">Нажмите \"Продолжить\", чтобы заполнить форму</string>
     <string name="nextStep">Продолжить</string>
+    <string name="chooseTypePlant">Выберите тип растения</string>
+    <string name="typeTree">Дерево</string>
+    <string name="typeBush">Куст</string>
+    <string name="typeGrass">Трава</string>
+    <string name="textEnterSpecies">Введите вид растения</string>
+    <string name="exampleSpecies">Лаванда</string>
+    <string name="textEnterSort">Введите сорт</string>
+    <string name="exampleSort">Южная Калифорния</string>
+    <string name="textEnterQuantity">Введите количество</string>
+    <string name="exampleQuantity">10</string>
+    <string name="textAboutPlant">Данные о растении:\n</string>
+    <string name="textBack">Назад</string>
+    <string name="textEnterDate">Введите дату посадки</string>
+    <string name="exampleDate">01/08/2023</string>
+    <string name="textEnterPhoto">Сделайте фото растения</string>
 </resources>
