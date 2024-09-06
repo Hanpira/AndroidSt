@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Item</string>
     <string name="infoPlant">Информация о растении</string>
-    <string name="tutorialFillForm">Нажмите \"Продолжить\", чтобы заполнить форму</string>
+    <string name="tutorialFillForm"> Введите свои данные: имя, адрес почты и номер телефона. \n\n Затем нажмите \"Продолжить\", чтобы заполнить форму</string>
     <string name="nextStep">Продолжить</string>
     <string name="chooseTypePlant">Выберите тип растения</string>
     <string name="typeTree">Дерево</string>
@@ -18,4 +18,12 @@
     <string name="textEnterDate">Введите дату посадки</string>
     <string name="exampleDate">01/08/2023</string>
     <string name="textEnterPhoto">Сделайте фото растения</string>
+    <string name="nameEnter">"Имя: "</string>
+    <string name="textPhone">Телефон:</string>
+    <string name="example_email">Email@email.com</string>
+    <string name="textEmail">Почта:</string>
+    <string name="example_name">Геннадий</string>
+    <string name="examplePhone">+375293654809</string>
+    <string name="textAboutUser">Данные о пользователе:\n</string>
+    <string name="textPhoto">Get Photo</string>
 </resources>

@@ -39,12 +39,14 @@ public class Plant2 extends AppCompatActivity {
         plantInfo.append("\n Тип: ");
         plantInfo.append(args.getString("TypePlant"));
 
-        editSort.setText(args.getString("Sort", ""));
-        editNumber.setText(args.getString("Number", ""));
+        if(args != null) {
+            editSort.setText(args.getString("Sort", ""));
+            editNumber.setText(args.getString("Number", ""));
+        }
     }
 
     public void onBackRegisterPlant(View view) {
-        Log.i("nextStep", "onRegisterPlant: ");
+        Log.i("backStep2", "onBackRegisterPlant: ");
         Intent intent = new Intent(this, Plant.class);
         intent.putExtras(getIntent().getExtras());
         intent.putExtra("Sort", editSort.getText().toString());
@@ -53,7 +55,7 @@ public class Plant2 extends AppCompatActivity {
     }
 
     public void onRegisterPlant2(View view) {
-        Log.i("nextStep", "onRegisterPlant: ");
+        Log.i("nextStep2", "onRegisterPlant: ");
         Intent intent = new Intent(this, Plant3.class);
         intent.putExtras(getIntent().getExtras());
         intent.putExtra("Sort", editSort.getText().toString());

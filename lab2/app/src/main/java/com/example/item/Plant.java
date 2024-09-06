@@ -44,39 +44,31 @@ public class Plant extends AppCompatActivity {
         radioGroup = (RadioGroup) findViewById(R.id.typeVariety);
         mInfoTextView = (TextView) findViewById(R.id.textViewCheck);
 
-        typeTree.setOnClickListener(radioClickListener);
-        typeBush.setOnClickListener(radioClickListener);
-        typeGrass.setOnClickListener(radioClickListener);
-
         Bundle args = getIntent().getExtras();
         if(args != null) {
             editSpecies.setText(args.getString("editSpecies"));
             mInfoTextView.setText(args.getString("TypePlant"));
         }
+
+        typeTree.setOnClickListener(radioClickListener);
+        typeBush.setOnClickListener(radioClickListener);
+        typeGrass.setOnClickListener(radioClickListener);
     }
 
     public void onRegisterPlant(View view) {
         Log.i("nextStep", "onRegisterPlant: ");
 
-        Bundle args = getIntent().getExtras();
-        if (editSpecies != null) {
+        if (editSpecies == null) {
+            Toast.makeText(this, "Введите вид растения",Toast.LENGTH_SHORT).show();
+        } else {
             Intent intent = new Intent(this, Plant2.class);
+            intent.putExtras(getIntent().getExtras());
             intent.putExtra("editSpecies", editSpecies.getText().toString());
             intent.putExtra("TypePlant", mInfoTextView.getText().toString());
-            if (args != null) {
-                intent.putExtra("editSpecies", args.getString("editSpecies", ""));
-                intent.putExtra("TypePlant", args.getString("TypePlant", ""));
-            }
             startActivity(intent);
-        } else {
-            Toast.makeText(this, "Введите вид растения",Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void CheckBtn(View v) {
-        Log.i("checkBtn", "CheckBtn: ");
-        mInfoTextView.append(" " + editSpecies.getText().toString() + " ");
-    }
     View.OnClickListener radioClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -93,4 +85,12 @@ public class Plant extends AppCompatActivity {
         }
     };
 
+    public void OnMainBtn(View view) {
+        Log.i("backStep", "onRegisterPlant: ");
+        Intent intent = new Intent(this, Plant3.class);
+        intent.putExtras(getIntent().getExtras());
+        intent.putExtra("TypePlant", mInfoTextView.getText().toString());
+        intent.putExtra("editSpecies", editSpecies.getText().toString());
+        startActivity(intent);
+    }
 }

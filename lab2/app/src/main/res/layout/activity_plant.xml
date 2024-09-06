@@ -78,7 +78,8 @@
             android:layout_marginRight="24dp"
             android:ems="10"
             android:hint="@string/exampleSpecies"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textSize="16sp"/>
 
         <Button
             android:id="@+id/btnStartInfo"
@@ -90,19 +91,21 @@
             android:onClick="onRegisterPlant"
             android:text="@string/nextStep" />
 
-        <TextView
-            android:id="@+id/textViewCheck"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="TextView" />
-
         <Button
             android:id="@+id/Check"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="CheckBtn"
-            android:text="Button" />
+            android:onClick="OnMainBtn"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/textBack" />
 
+        <TextView
+            android:id="@+id/textViewCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="invisible"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

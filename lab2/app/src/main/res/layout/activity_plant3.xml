@@ -49,6 +49,7 @@
             android:layout_marginRight="20dp"
             android:ems="10"
             android:inputType="date"
+            android:textSize="16sp"
             android:hint="@string/exampleDate" />
 
         <TextView
@@ -58,6 +59,17 @@
             android:layout_margin="16dp"
             android:textSize="16sp"
             android:text="@string/textEnterPhoto" />
+
+        <Button
+            android:id="@+id/btnGetPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="OnImageGet"
+            android:text="@string/textPhoto" />
 
         <ImageView
             android:id="@+id/imageView"
