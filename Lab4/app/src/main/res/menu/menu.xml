@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_fill_email"
+        android:title="@string/email" />
+    <item
+        android:id="@+id/action_fill_other"
+        android:title="@string/field2" />
+    <item
+        android:id="@+id/action_fill_all"
+        android:title="@string/fillFull" />
+    <item
+        android:id="@+id/action_clear"
+        android:title="@string/clearAllData" />
+</menu>

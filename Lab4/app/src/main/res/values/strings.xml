@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Lab4</string>
+    <string name="app_name">Выбрать действие</string>
+    <string name="returnButton">Вернуться на главную страницу</string>
+    <string name="titleDateTime">Дата и время</string>
+    <string name="btn_SetDateTime">Установить дату и время</string>
+    <string name="TextBackToMP">Вернуться на главную страницу</string>
+    <string name="enter_correct_email_text">Введите адрес электронной почты в правильном формате</string>
 </resources>

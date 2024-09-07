@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Лабораторная работа по Android #4 </string>
+    <string name="choice_menu1">Смотреть меню параметров</string>
+    <string name="choice_menu2">Смотреть контекстное меню</string>
+    <string name="choice_menu3">Смотреть PopUp, Alert, Date</string>
+
+    <string name="menu1">
+        Меню параметров
+    </string>
+
+    <string name="menu2">
+        Контекстное меню
+    </string>
+
+    <string name="menu3">
+        !!!через меню заполнить поле (Anna) и во ВТОРОМ ПОЛЕ нажать ПРОВЕРИТЬ
+        - осуществиться переход на страницу настройки даты и времени,
+        если написать другое имя - перехода на страницу настройки времени осуществляться не будет)
+    </string>
+
+    <string name="email">Заполнить первое поле (Email)</string>
+    <string name="field2">Заполнить второе поле</string>
+    <string name="fillFull">Заполнить всё</string>
+    <string name="clearAllData">Очистить данные</string>
+    <string name="test1_iba_by">test1@iba.by</string>
+    <string name="test_iba_by">test@iba.by</string>
+    <string name="editText">Введите текст</string>
+    <string name="fillField">Заполнить поле</string>
+    <string name="cleanField">Очистить поле</string>
+    <string name="checkField">Проверить поле</string>
+    <string name="enterData">Ввести данные</string>
+    <string name="clearData">Очистить данные</string>
+    <string name="checkData">Проверить данные</string>>
+</resources>
