@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lab6_1</string>
+    <string name="appTitle">Лабораторная работа №6. \n Хранение данных</string>
+    <string name="hint_edit_text">Enter text here</string>
+    <string name="write_shared_pref">Write Shared Pref</string>
+    <string name="read_shared_pref">Read Shared Pref</string>
+    <string name="write_internal">Write Internal</string>
+    <string name="read_internal">Read Internal</string>
+    <string name="write_external">Write External</string>
+    <string name="read_external">Read External</string>
+    <string name="write_sql">Write SQL</string>
+    <string name="read_sql">Read SQL</string>
+    <string name="text_shared_preference">Shared Preference:</string>
+    <string name="text_internal">Internal:</string>
+    <string name="text_external">External:</string>
+    <string name="text_sql">SQL:</string>
+    <string name="delete_sql">Delete SQL</string>
+    <string name="update_sql">Update SQL</string>
+    <string name="hint2_edit_text">Enter Year (Example For SQL DB)</string>
+</resources>
