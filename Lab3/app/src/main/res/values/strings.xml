@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Lab3</string>
     <string name="title_list">The Rookie Officers</string>
+    <string name="title_name">Officer\'s name:</string>
+    <string name="title_badge">Badge number</string>
+    <string name="title_email">"Email: "</string>
 </resources>

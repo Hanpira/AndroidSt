@@ -37,7 +37,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("badge:" + contact.getBadgeNumber()));
+            intent.setData(Uri.parse("tel:" + contact.getBadgeNumber()));
             context.startActivity(intent);
         });
 
