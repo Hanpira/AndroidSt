@@ -21,7 +21,21 @@ public class AnimalDescriptionFragment extends Fragment {
 
         if (getArguments() != null) {
             String animal = getArguments().getString("animal");
-            animalDescription.setText("Описание: " + animal);
+            String animalDesc = "";
+
+            if( animal == "Собака") {
+                animalDesc = "Верный друг";
+            } else if (animal == "Кот") {
+                animalDesc =  "Котик- это котик";
+            } else if (animal == "Морская свинка") {
+                animalDesc = "Забавный зверек";
+            } else if (animal == "Единорог") {
+                animalDesc = "Увы их нет.. наверное";
+            } else {
+                animalDesc = " ";
+            }
+
+            animalDescription.setText("Описание: " + animalDesc);
         }
 
         return view;
