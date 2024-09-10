@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         List<Contact> contacts = new ArrayList<>();
         contacts.add(new Contact("John Nolan", "25253", "john@example.com"));
-        contacts.add(new Contact("Angela Lopez", "1777", "ariana@example.com"));
-        contacts.add(new Contact("Wade Grey", "6325", "tom@example.com"));
-        contacts.add(new Contact("Lucy Chen", "28537", "ivan@example.com"));
-        contacts.add(new Contact("Tim Bradford", "3483", "vanessa@example.com"));
-        contacts.add(new Contact("Nyla Harper", "56464", "vanessa@example.com"));
+        contacts.add(new Contact("Angela Lopez", "1777", "angela@example.com"));
+        contacts.add(new Contact("Wade Grey", "6325", "wade@example.com"));
+        contacts.add(new Contact("Lucy Chen", "28537", "lucy@example.com"));
+        contacts.add(new Contact("Tim Bradford", "3483", "tim@example.com"));
+        contacts.add(new Contact("Nyla Harper", "56464", "nyla@example.com"));
 
 
         ContactsAdapter adapter = new ContactsAdapter(this, contacts);
