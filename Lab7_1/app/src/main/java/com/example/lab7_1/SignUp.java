@@ -78,7 +78,3 @@ public class SignUp extends AppCompatActivity {
         startActivity(intent);
     }
 }
-
-
-// annromanenko@mail.ru qwerty123
-// romanenkoav2.22@gmail.com 123456 or 123456789
