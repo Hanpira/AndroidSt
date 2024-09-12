@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lab7_1</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_passw">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_sign_with_google">Sign in with Google</string>
+    <string name="text_to_register">Not registered? Sign Up</string>
+    <string name="text_forgot_password">Forgot password?</string>
+    <string name="text_login">Login</string>
+    <string name="text_sign_up">Sign Up</string>
+    <string name="text_login_from_signup">Already with us? Login.</string>
+    <string name="text_forgotpassw">Forgot Password</string>
+    <string name="hint_email_here">Enter your email here</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_reset">Reset</string>
+    <string name="client_id">343107966386-tf2nl616dr22tave1b218263mim89pnh.apps.googleusercontent.com</string>
+    <string name="text_log_out">Log out</string>
+
+</resources>
