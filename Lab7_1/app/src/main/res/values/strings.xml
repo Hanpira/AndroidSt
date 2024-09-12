@@ -15,5 +15,15 @@
     <string name="text_reset">Reset</string>
     <string name="client_id">343107966386-tf2nl616dr22tave1b218263mim89pnh.apps.googleusercontent.com</string>
     <string name="text_log_out">Log out</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="hint_enter_email">Enter Email</string>
+    <string name="text_save">Save</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_add_user">add user</string>
+    <string name="text_information">Information</string>
+    <string name="firestore">Firestore</string>
+    <string name="delete_firestore">Delete Firestore</string>
+    <string name="save_firestore">Save Firestore</string>
+    <string name="userfirestore">User Firestore</string>
 
 </resources>

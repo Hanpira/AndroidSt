@@ -8,34 +8,83 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="350dp"
+        android:layout_height="700dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="6dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
             android:text="Hello World!"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/titleMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:text=""
             android:textAlignment="center"
-            android:text="Title"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/buttonAdd"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="25dp"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:onClick="onAddClick"-->
+<!--            android:text="@string/text_add_user" />-->
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:onClick="ChooseDb"
+            android:text="Choose Database" />
+
+        <ListView
+            android:id="@+id/listUsers"
+            android:layout_width="413dp"
+            android:layout_height="246dp">
+
+        </ListView>
+
+<!--        <Button-->
+<!--            android:id="@+id/btnFirestore"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onFirestoreClick"-->
+<!--            android:text="Firestore" />-->
 
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="30dp"
             android:onClick="onSignOut"
             android:text="@string/text_log_out" />
+
     </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
